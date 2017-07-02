@@ -1,87 +1,45 @@
-<IfModule mod_deflate.c>
+<ifModule mod_expires.c>
 
-# Принудительное сжатие для исковерканных заголовков.
-# https://developer.yahoo.com/blogs/ydn/pushing-beyond-gzipping-25601.html
-<IfModule mod_setenvif.c>
-<IfModule mod_headers.c>
-SetEnvIfNoCase ^(Accept-EncodXng|X-cept-Encoding|X{15}|~{15}|-{15})$ ^((gzip|deflate)\s*,?\s*)+|[X~-]{4,13}$ HAVE_Accept-Encoding
-RequestHeader append Accept-Encoding "gzip,deflate" env=HAVE_Accept-Encoding
-</IfModule>
-</IfModule>
+# Add correct content-type for fonts
+AddType application/vnd.ms-fontobject .eot
+AddType application/x-font-ttf .ttf
+AddType application/x-font-opentype .otf
+AddType application/x-font-woff .woff
+AddType image/svg+xml .svg
 
-# Сжимать исходящие данные с одним из следующих MIME типов
-# (для Apache ниже версии 2.3.7 не нужно включать `mod_filter`
-# и вы можете удалить строки `<IfModule mod_filter.c>` и `</IfModule>`
-# так как `AddOutputFilterByType` все еще есть в ядре Apache).
-<IfModule mod_filter.c>
-AddOutputFilterByType DEFLATE application/atom+xml \
-application/javascript \
-application/json \
-application/rss+xml \
-application/vnd.ms-fontobject \
-application/x-font-ttf \
-application/x-web-app-manifest+json \
-application/xhtml+xml \
-application/xml \
-font/opentype \
-image/svg+xml \
-image/x-icon \
-text/css \
-text/html \
-text/plain \
-text/x-component \
-text/xml
-</IfModule>
+# Compress compressible fonts
+AddOutputFilterByType DEFLATE application/x-font-ttf application/x-font-opentype image/svg+xml
 
-</IfModule>
+ExpiresActive On
+ExpiresDefault "access plus 5 seconds"
 
+# Cache Images
+ExpiresByType image/x-icon "access plus 2592000 seconds"
+ExpiresByType image/jpeg "access plus 2592000 seconds"
+ExpiresByType image/png "access plus 2592000 seconds"
+ExpiresByType image/gif "access plus 2592000 seconds"
+ExpiresByType image/svg+xml "access plus 2592000 seconds"
 
-<IfModule mod_expires.c>
-ExpiresActive on
-ExpiresDefault                                      "access plus 1 month"
+# Cache Fonts
+ExpiresByType application/vnd.ms-fontobject "access plus 2592000 seconds"
+ExpiresByType application/x-font-ttf "access plus 2592000 seconds"
+ExpiresByType application/x-font-opentype "access plus 2592000 seconds"
+ExpiresByType application/x-font-woff "access plus 2592000 seconds"
+ExpiresByType image/svg+xml "access plus 2592000 seconds"
 
-# CSS
-ExpiresByType text/css                              "access plus 1 year"
+# Cache other content types (Flash, CSS, JS, HTML, XML)
+ExpiresByType application/x-shockwave-flash "access plus 2592000 seconds"
+ExpiresByType text/css "access plus 604800 seconds"
+ExpiresByType text/javascript "access plus 2592000 seconds"
+ExpiresByType application/javascript "access plus 2592000 seconds"
+ExpiresByType application/x-javascript "access plus 2592000 seconds"
+ExpiresByType text/html "access plus 600 seconds"
+ExpiresByType application/xhtml+xml "access plus 600 seconds"
 
-# Данные
-ExpiresByType application/json                      "access plus 0 seconds"
-ExpiresByType application/xml                       "access plus 0 seconds"
-ExpiresByType text/xml                              "access plus 0 seconds"
+</ifModule>
 
-# Favicon
-ExpiresByType image/x-icon                          "access plus 1 week"
+<ifModule mod_deflate.c>
 
-# HTML компоненты (HTCs)
-ExpiresByType text/x-component                      "access plus 1 month"
+AddOutputFilterByType DEFLATE text/html text/plain text/xml application/xml application/xhtml+xml text/css text/javascript application/javascript application/x-javascript
 
-# HTML
-ExpiresByType text/html                             "access plus 0 seconds"
-
-# JavaScript
-ExpiresByType application/javascript                "access plus 1 year"
-
-# Файлы манифеста (Manifest)
-ExpiresByType application/x-web-app-manifest+json   "access plus 0 seconds"
-ExpiresByType text/cache-manifest                   "access plus 0 seconds"
-
-# Медиа
-ExpiresByType audio/ogg                             "access plus 1 month"
-ExpiresByType image/gif                             "access plus 1 month"
-ExpiresByType image/jpeg                            "access plus 1 month"
-ExpiresByType image/png                             "access plus 1 month"
-ExpiresByType video/mp4                             "access plus 1 month"
-ExpiresByType video/ogg                             "access plus 1 month"
-ExpiresByType video/webm                            "access plus 1 month"
-
-# Фиды
-ExpiresByType application/atom+xml                  "access plus 1 hour"
-ExpiresByType application/rss+xml                   "access plus 1 hour"
-
-# Web шрифты
-ExpiresByType application/font-woff2                "access plus 1 month"
-ExpiresByType application/font-woff                 "access plus 1 month"
-ExpiresByType application/vnd.ms-fontobject         "access plus 1 month"
-ExpiresByType application/x-font-ttf                "access plus 1 month"
-ExpiresByType font/opentype                         "access plus 1 month"
-ExpiresByType image/svg+xml                         "access plus 1 month"
-</IfModule>
+</ifModule>
