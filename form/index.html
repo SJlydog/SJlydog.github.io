@@ -41,41 +41,41 @@
     <label for="tab3" title="Вкладка 3">Заборы из сетки рабицы</label>
  
     <form id="content-tab1">
-    	<div class="first dib">
-    		<p><span class="orange-line">1</span> Необходимая длина Забора</p>
-    		<input type="text" class="input-name" required> <span class="color-text">метров</span>
+    	<div class="first">
+    		<p><span class="orange-line">1</span> Необходимая длина Забора</p><br>
+    		<input type="text" class="input-name"> <span class="color-text">метров</span>
     	</div>
-    	<div class="second dib">
+    	<div class="second">
     		<p><span class="orange-line">2</span> Высота забора, метров</p>
-    		<input type="radio" name="rad1" value="1.5" class="checkbox-item" checked> <span>1.5</span>
-    		<input type="radio" name="rad1" value="1.7" class="checkbox-item"> <span>1.7</span>
-    		<input type="radio" name="rad1" value="1.8" class="checkbox-item"> <span>1.8</span>
-    		<input type="radio" name="rad1" value="2" class="checkbox-item"> <span>2</span>
+    		<input type="radio" name="rad1" value="1.5" class="checkbox-item" id="rd1" checked> <label for="rd1">1.5</label >
+    		<input type="radio" name="rad1" value="1.7" class="checkbox-item" id="rd2"> <label for="rd2">1.7</label >
+    		<input type="radio" name="rad1" value="1.8" class="checkbox-item" id="rd3"> <label for="rd3">1.8</label >
+    		<input type="radio" name="rad1" value="2" class="checkbox-item" id="rd4"> <label for="rd4">2</label >
     	</div>
-    	<div class="therd dib">
+    	<div class="therd">
     		<p><span class="orange-line">3</span> Количество горизонталей(лаг)</p>
-    		<input type="radio" name="rad2" value="2" class="checkbox-item" checked> <span>2</span>
-    		<input type="radio" name="rad2" value="3" class="checkbox-item"> <span>3</span>
+    		<input type="radio" name="rad2" value="2" class="checkbox-item" id="rd11" checked> <label for="rd11">2</label >
+    		<input type="radio" name="rad2" value="3" class="checkbox-item" id="rd22"> <label for="rd22">3</label>
     	</div>
-    	<div class="four dib">
+    	<div class="four">
     		<p><span class="orange-line">4</span> Количество ворот</p>
-    		<input type="radio" name="rad4" value="нет" class="checkbox-item" checked> <span>нет</span>
-    		<input type="radio" name="rad4" value="1" class="checkbox-item"> <span>1</span>
-    		<input type="radio" name="rad4" value="2" class="checkbox-item"> <span>2</span>
-    		<input type="radio" name="rad4" value="3" class="checkbox-item"> <span>3</span>
+    		<input type="radio" name="rad4" value="нет" class="checkbox-item" id="rd1111" checked> <label for="rd1111">нет</label>
+    		<input type="radio" name="rad4" value="1" class="checkbox-item" id="rd2222"> <label for="rd2222">1</label>
+    		<input type="radio" name="rad4" value="2" class="checkbox-item" id="rd3333"> <label for="rd3333">2</label>
+    		<input type="radio" name="rad4" value="3" class="checkbox-item" id="rd4444"> <label for="rd4444">3</label>
     	</div>
-    	<div class="five dib">
+    	<div class="five">
     		<p><span class="orange-line">5</span> Ширина ворот,метров</p>
-    		<input type="radio" name="rad5" value="3" class="checkbox-item" checked> <span>4</span>
-    		<input type="radio" name="rad5" value="3,5" class="checkbox-item"> <span>3,5</span>
-    		<input type="radio" name="rad5" value="4" class="checkbox-item"> <span>4</span>
+    		<input type="radio" name="rad5" value="3" class="checkbox-item" id="rd11111" checked> <label for="rd11111">4</label>
+    		<input type="radio" name="rad5" value="3,5" class="checkbox-item" id="rd22222"> <label for="rd22222">3,5</label>
+    		<input type="radio" name="rad5" value="4" class="checkbox-item" id="rd33333"> <label for="rd33333">4</label>
     	</div>
-    	<div class="six dib">
+    	<div class="six">
     		<p><span class="orange-line">6</span> Количество калиток</p>
-    		<input type="radio" name="rad6" value="нет" class="checkbox-item" checked> <span>нет</span>
-    		<input type="radio" name="rad6" value="1" class="checkbox-item"> <span>1</span>
-    		<input type="radio" name="rad6" value="2" class="checkbox-item"> <span>2</span>
-    		<input type="radio" name="rad6" value="3" class="checkbox-item"> <span>3</span>
+    		<input type="radio" name="rad6" value="нет" class="checkbox-item" id="rd0" checked> <label for="rd0">нет</label>
+    		<input type="radio" name="rad6" value="1" class="checkbox-item" id="rd111111"> <label for="rd111111">1</label>
+    		<input type="radio" name="rad6" value="2" class="checkbox-item" id="rd222222"> <label for="rd222222">2</label>
+    		<input type="radio" name="rad6" value="3" class="checkbox-item" id="rd333333"> <label for="rd333333">3</label>
     	</div>
     	<div class="seven">
     		<p><span class="orange-line">7</span> Телефон</p>
@@ -83,15 +83,97 @@
      	</div>
 
      	<a class="button-php" href="#">Рассчитать</a>
+     	<div class="div"></div>
     </form>  
     <form id="content-tab2">
-       231
+       <div class="first">
+    		<p><span class="orange-line">1</span> Необходимая длина Забора</p><br>
+    		<input type="text" class="input-name"> <span class="color-text">метров</span>
+    	</div>
+    	<div class="second">
+    		<p><span class="orange-line">2</span> Высота забора, метров</p>
+    		<input type="radio" name="rad1" value="1.5" class="checkbox-item" id="rb1" checked> <label for="rb1">1.5</label >
+    		<input type="radio" name="rad1" value="1.8" class="checkbox-item" id="rb3"> <label for="rb3">1.8</label >
+    		<input type="radio" name="rad1" value="2" class="checkbox-item" id="rb4"> <label for="rb4">2</label >
+    	</div>
+    	<div class="therd">
+    		<p><span class="orange-line">3</span> Протяжка арматурой</p>
+    		<input type="radio" name="rad2" value="нет" class="checkbox-item" id="rb11" checked> <label for="rb11">нет</label >
+    		<input type="radio" name="rad2" value="1" class="checkbox-item" id="rb22"> <label for="rb22">1</label>
+    		<input type="radio" name="rad2" value="2" class="checkbox-item" id="rb33"> <label for="rb33">2</label>
+    	</div>
+    	<div class="four">
+    		<p><span class="orange-line">4</span> Количество ворот</p>
+    		<input type="radio" name="rad4" value="нет" class="checkbox-item" id="rb1111" checked> <label for="rb1111">нет</label>
+    		<input type="radio" name="rad4" value="1" class="checkbox-item" id="rb2222"> <label for="rb2222">1</label>
+    		<input type="radio" name="rad4" value="2" class="checkbox-item" id="rb3333"> <label for="rb3333">2</label>
+    		<input type="radio" name="rad4" value="3" class="checkbox-item" id="rb4444"> <label for="rb4444">3</label>
+    	</div>
+    	<div class="five">
+    		<p><span class="orange-line">5</span> Ширина ворот,метров</p>
+    		<input type="radio" name="rad5" value="3" class="checkbox-item" id="rb11111" checked> <label for="rb11111">4</label>
+    		<input type="radio" name="rad5" value="3,5" class="checkbox-item" id="rb22222"> <label for="rb22222">3,5</label>
+    		<input type="radio" name="rad5" value="4" class="checkbox-item" id="rb33333"> <label for="rb33333">4</label>
+    	</div>
+    	<div class="six">
+    		<p><span class="orange-line">6</span> Количество калиток</p>
+    		<input type="radio" name="rad6" value="нет" class="checkbox-item" id="rb0" checked> <label for="rb0">нет</label>
+    		<input type="radio" name="rad6" value="1" class="checkbox-item" id="rb111111"> <label for="rb111111">1</label>
+    		<input type="radio" name="rad6" value="2" class="checkbox-item" id="rb222222"> <label for="rb222222">2</label>
+    		<input type="radio" name="rad6" value="3" class="checkbox-item" id="rb333333"> <label for="rb333333">3</label>
+    	</div>
+    	<div class="seven">
+    		<p><span class="orange-line">7</span> Телефон</p>
+    		<input type="phone" name="phone" class="input-phone" checked>
+     	</div>
+       <a class="button-php" href="#">Рассчитать</a>
+       <div class="div"></div>
     </form> 
     <form id="content-tab3">
-     123
+  		<div class="first">
+    		<p><span class="orange-line">1</span> Необходимая длина Забора</p><br>
+    		<input type="text" class="input-name"> <span class="color-text">метров</span>
+    	</div>
+    	<div class="second">
+    		<p><span class="orange-line">2</span> Высота забора, метров</p>
+    		<input type="radio" name="rad1" value="1.5" class="checkbox-item" id="rb1" checked> <label for="rb1">1.5</label >
+    		<input type="radio" name="rad1" value="1.8" class="checkbox-item" id="rb3"> <label for="rb3">1.8</label >
+    		<input type="radio" name="rad1" value="2" class="checkbox-item" id="rb4"> <label for="rb4">2</label >
+    	</div>
+    	<div class="therd">
+    		<p><span class="orange-line">3</span> Протяжка арматурой</p>
+    		<input type="radio" name="rad2" value="нет" class="checkbox-item" id="rb11" checked> <label for="rb11">нет</label >
+    		<input type="radio" name="rad2" value="1" class="checkbox-item" id="rb22"> <label for="rb22">1</label>
+    		<input type="radio" name="rad2" value="2" class="checkbox-item" id="rb33"> <label for="rb33">2</label>
+    	</div>
+    	<div class="four">
+    		<p><span class="orange-line">4</span> Количество ворот</p>
+    		<input type="radio" name="rad4" value="нет" class="checkbox-item" id="rb1111" checked> <label for="rb1111">нет</label>
+    		<input type="radio" name="rad4" value="1" class="checkbox-item" id="rb2222"> <label for="rb2222">1</label>
+    		<input type="radio" name="rad4" value="2" class="checkbox-item" id="rb3333"> <label for="rb3333">2</label>
+    		<input type="radio" name="rad4" value="3" class="checkbox-item" id="rb4444"> <label for="rb4444">3</label>
+    	</div>
+    	<div class="five">
+    		<p><span class="orange-line">5</span> Ширина ворот,метров</p>
+    		<input type="radio" name="rad5" value="3" class="checkbox-item" id="rb11111" checked> <label for="rb11111">4</label>
+    		<input type="radio" name="rad5" value="3,5" class="checkbox-item" id="rb22222"> <label for="rb22222">3,5</label>
+    		<input type="radio" name="rad5" value="4" class="checkbox-item" id="rb33333"> <label for="rb33333">4</label>
+    	</div>
+    	<div class="six">
+    		<p><span class="orange-line">6</span> Количество калиток</p>
+    		<input type="radio" name="rad6" value="нет" class="checkbox-item" id="rb0" checked> <label for="rb0">нет</label>
+    		<input type="radio" name="rad6" value="1" class="checkbox-item" id="rb111111"> <label for="rb111111">1</label>
+    		<input type="radio" name="rad6" value="2" class="checkbox-item" id="rb222222"> <label for="rb222222">2</label>
+    		<input type="radio" name="rad6" value="3" class="checkbox-item" id="rb333333"> <label for="rb333333">3</label>
+    	</div>
+    	<div class="seven">
+    		<p><span class="orange-line">7</span> Телефон</p>
+    		<input type="phone" name="phone" class="input-phone" checked>
+     	</div>
+       <a class="button-php" href="#">Рассчитать</a>
+       <div class="div"></div>
     </form>   
 </div>
-
 	
 	<link rel="stylesheet" href="css/main.css">
 	<script src="js/scripts.min.js"></script>
