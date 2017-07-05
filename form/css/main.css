@@ -111,12 +111,21 @@ body {
 	position: relative;
 	width: 51.9%;
 	clear: both;
+	text-align: left;
 }
 
 #content-tab2 {
 	width: 51.9%;
 	position: relative;
-	margin-left: 18%;
+	margin-left: 19%;
+	text-align: center;
+}
+
+#content-tab3{
+	width: 51.9%;
+	position: relative;
+	margin-left: 38%;
+	text-align: right;
 }
 
 .div {
@@ -200,7 +209,7 @@ input[type="radio"] + label::before {
 /* Checked */
 input[type="radio"]:checked + label {
   padding-left: 10px;
-  color: #fff;
+  color: black;
   background-color: rgb(255, 207, 71);
 }
 input[type="radio"]:checked + label::before {
