@@ -17,6 +17,10 @@
 		padding: 0 20px;
 		text-align: center;
 	}
+
+	.form-top input {
+		margin-right: 0;
+	}
 }
 
 /* Medium Devices, Desktops */
