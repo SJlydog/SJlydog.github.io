@@ -1,0 +1,197 @@
+/*==========  Desktop First Method  ==========*/
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1200px) {
+	.header-item h2 {
+		font-size: 20px;
+	}
+	.header-item li {
+		font-size: 17px;
+
+	}
+	.header-item ul {
+		padding: 0;
+	}
+
+	.garanties-text p {
+		padding: 0 20px;
+		text-align: center;
+	}
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px) {
+	
+	.header-item h2 {
+		font-size: 22px;
+	}
+	.header-item li {
+		font-size: 15px;
+		line-height: 25px;
+
+	}
+	.header-item ul {
+		padding: 0;
+	}
+
+	.thumb {
+		position: relative;
+		padding-bottom: 49%; /* задаёт высоту контейнера для 16:9 (если 4:3 — поставьте 75%) */
+		padding-top: 30px;
+		height: 0;
+		overflow: hidden;
+	} 
+
+	.form-top input {
+		margin-bottom: 30px;
+		margin-right: 0;
+	}
+	
+	.kinds-item {
+		margin-bottom: 20px;
+	}
+
+
+}
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px) {
+	
+	/*Disable Animation on Mobile Devices*/
+	.animated {
+		/*CSS transitions*/
+		-o-transition-property: none !important;
+		-moz-transition-property: none !important;
+		-ms-transition-property: none !important;
+		-webkit-transition-property: none !important;
+		transition-property: none !important;
+		/*CSS transforms*/
+		-o-transform: none !important;
+		-moz-transform: none !important;
+		-ms-transform: none !important;
+		-webkit-transform: none !important;
+		transform: none !important;
+		/*CSS animations*/
+		-webkit-animation: none !important;
+		-moz-animation: none !important;
+		-o-animation: none !important;
+		-ms-animation: none !important;
+		animation: none !important;
+	}
+
+	.header-item h2 {
+		font-size: 22px;
+		text-align: center;
+	}
+	.header-item li {
+		font-size: 15px;
+		line-height: 25px;
+		text-align: center;
+	}
+
+	.thumb iframe {
+		margin-left: -236px;
+		left: 50%;
+	}
+	.thumb {
+		margin-bottom: 30px;
+	}	
+
+	.kinds-item {
+		margin-bottom: 20px;
+	}
+
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 480px) {
+
+	.thumb iframe {
+		margin-left: 0;
+		left: 0;
+	}
+	.thumb {
+		margin-bottom: 30px;
+	}	
+
+	.header-item li {
+		font-size: 15px;
+		margin-bottom: 10px;
+		line-height: 25px;
+		text-align: center;
+	}
+
+	.header-mnu h1{
+		font-size: 18px;
+	}
+	.header-mnu .ru {
+		font-size: 56px;
+	}
+
+	.header-mnu h1 .padding {
+		letter-spacing: 6px;
+	}
+
+	.header-text {
+		padding-top: 70px;
+	}
+
+	.kinds-item img {
+		width: 50%;
+	}
+
+	.header-mnu {
+		height: 12%;
+	}
+
+	.header-mnu h1 {
+		line-height: 20px;
+		vertical-align: top;
+	}
+	.header-mnu .ru {
+		vertical-align: top;
+		line-height: 35px;
+	}
+
+	.hamburger {
+		top: -10px;
+	}
+
+	.kinds-page .btn-silver {
+		margin-right: 0;
+	}
+
+}
+
+/* Custom, iPhone Retina */
+@media only screen and (max-width : 320px) {
+
+}
+
+
+/*==========  Mobile First Method  ==========*/
+
+/* Custom, iPhone Retina */
+@media only screen and (min-width : 320px) {
+
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (min-width : 480px) {
+
+}
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px) {
+
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px) {
+
+}
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width : 1200px) {
+
+}
