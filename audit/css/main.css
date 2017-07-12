@@ -391,18 +391,21 @@ ul, li {
 	display: -moz-flex;
 	display: -ms-flex;
 	display: -o-flex;
-	display: -webkit-box;
+	display: -webkit-box !important;
 	display: -ms-flexbox;
 	display: flex;
 	-webkit-box-orient: horizontal;
 	-webkit-box-direction: normal;
-	    -ms-flex-direction: row;
-	        flex-direction: row;
+			-ms-flex-direction: row;
+					-webkit-flex-direction: row;
+					flex-direction: row;
 	-webkit-box-pack: center;
-	    -ms-flex-pack: center;
-	        justify-content: center;
+			-ms-flex-pack: center;
+					-webkit-justify-content: center;
+					justify-content: center;
 	-ms-flex-wrap: wrap;
-	    flex-wrap: wrap;
+			-webkit-flex-wrap: wrap;
+					flex-wrap: wrap;
 	max-width: 1140px;
 	width: 100%;
 	margin: 0 auto 50px;
@@ -631,7 +634,7 @@ ul, li {
 }
 
  .kinds-item {
- 	transition: all .5s ease
+	transition: all .5s ease
  }
 
  .kinds-item:hover {
